@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMDb Movie Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="search-panel" aria-label="Movie search">
+        <div class="brand">
+          <span class="brand__mark">OMDb</span>
+          <h1>Movie Search</h1>
+        </div>
+
+        <form class="search-form">
+          <label>
+            Search movies
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Try Batman, Avatar, Spider-Man..."
+              required
+            />
+          </label>
+
+          <label>
+            Sort by
+            <select class="sort-select">
+              <option value="title-asc">Title A-Z</option>
+              <option value="title-desc">Title Z-A</option>
+              <option value="year-desc">Newest first</option>
+              <option value="year-asc">Oldest first</option>
+              <option value="type-asc">Type A-Z</option>
+            </select>
+          </label>
+
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="results-section" aria-live="polite">
+        <div class="results-header">
+          <h2 class="results-title">Search for a movie</h2>
+          <p class="results-count"></p>
+        </div>
+
+        <div class="movie-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
